@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        @font-face {
+            font-family: "CustomFont";
+            src: url(AntonRegular.ttf);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            background-color: rgb(14,14,14);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .card{
+            max-width: 350px;
+            max-height: 800px;
+            width: 30vw;
+            height: 45vh;
+            border: blueviolet 2px solid;
+            background:url(bahri.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        .in{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            transform: translateY(-100%);/* burayı -100% yap */
+            transition: 0.5s;
+        }
+        .card:hover .in{
+            transform: translateY(0);
+
+        }
+        .card:hover{
+            transition: 0.25s;
+            filter: drop-shadow(0px 0px 4px blueviolet);
+        }
+        .card:not(:hover) .in{
+            transition: 1.25s;
+        }
+        .card:hover .icons>img{
+            opacity: 1;
+        }
+        .card:not(:hover) .icons>img{
+            transition-delay: 0;
+            transition: 0.1s;
+            opacity: 0;
+        }
+        .icons{
+            bottom: 10px;
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .icons  img{
+            margin: 0 5px;
+            height: 40px;
+            width: 40px;
+        }
+        .icons > img:hover{
+            transition: 0.3s;
+            filter: drop-shadow(0px 0px 6px #09ff00);
+        }
+        .icons > img:not(:hover){
+            transition: 0.2s;
+            filter: drop-shadow(0px 0px 0px #09ff00);
+        }
+        h1 , h2 {
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        .i1{
+            transition: 0.5s;
+            opacity: 0;
+            transition-delay:0.25s;
+        }
+        .i2{
+            transition: 0.5s;
+            opacity: 0;
+            transition-delay:0.5s;
+        }
+        .i3{
+            transition: 0.5s;
+            opacity: 0;
+            transition-delay:0.75s;
+        }
+        .i4{
+            transition: 0.5s;
+            opacity: 0;
+            transition-delay:1s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="in">
+            <h1>BAHRİ AKÇAN</h1>
+            <hr>
+            <h2>Software Engineer</h2>
+            <div class="icons">
+                <img src="linkedin.png" alt="" class="i1">
+                <img src="whatsapp.png" alt="" class="i2">
+                <img src="spotify.png" alt="" class="i3">
+                <img src="email.png" alt="" class="i4">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
